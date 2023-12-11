@@ -11,7 +11,6 @@ The code is based on Python 3.7. In addition, you need to add the following depe
     lmdb==0.98
     networkx==2.4
     scikit-learn==0.22.1
-    torch==1.4.0
     tqdm==4.43.0
 
 ## Code structure
