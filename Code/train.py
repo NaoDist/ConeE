@@ -71,14 +71,14 @@ if __name__ == '__main__':
 
     logging.basicConfig(level=logging.INFO)
 
-    parser = argparse.ArgumentParser(description='TransE model')
+    parser = argparse.ArgumentParser(description='other models')
 
     # Experiment setup params
     parser.add_argument("--experiment_name", "-e", type=str, default="WN18RR_v1",
                         help="A folder with this name would be created to dump saved models and log files")
     parser.add_argument("--dataset", "-d", type=str, default="WN18RR_v1",
                         help="Dataset string")
-    parser.add_argument("--gpu", type=int, default=0,
+    parser.add_argument("--gpu", type=int, default=2,
                         help="Which GPU to use?")
     parser.add_argument('--disable_cuda', action='store_true',
                         help='Disable CUDA')
@@ -89,7 +89,7 @@ if __name__ == '__main__':
     parser.add_argument("--valid_file", "-vf", type=str, default="valid",
                         help="Name of file containing validation triplets")
 
-    # Training regime params
+    # Training related params
     parser.add_argument("--num_epochs", "-ne", type=int, default=30,
                         help="Learning rate of the optimizer")
     parser.add_argument("--eval_every", type=int, default=3,
@@ -111,7 +111,7 @@ if __name__ == '__main__':
     parser.add_argument("--margin", type=float, default=10,
                         help="The margin between positive and negative samples in the max-margin loss")
 
-    # Data processing pipeline params
+    # Data params
     parser.add_argument("--max_links", type=int, default=1000000,
                         help="Set maximum number of train links (to fit into memory)")
     parser.add_argument("--hop", type=int, default=3,
@@ -137,7 +137,7 @@ if __name__ == '__main__':
     parser.add_argument('--enclosing_sub_graph', '-en', type=bool, default=True,
                         help='whether to only consider enclosing subgraph')
 
-    # Model params
+    # some params
     parser.add_argument("--rel_emb_dim", "-r_dim", type=int, default=32,
                         help="Relation embedding size")
     parser.add_argument("--attn_rel_emb_dim", "-ar_dim", type=int, default=32,
@@ -170,7 +170,7 @@ if __name__ == '__main__':
     parser.add_argument('--sort_data', type=bool, default=True,
                         help='whether to training data according to relation id ')
     parser.add_argument('--nei_rel_path', action='store_false',
-                        help='whether to consider neighboring relational paths')
+                        help='')
     parser.add_argument('--path_agg', type=str, choices=['mean', 'att'], default='att', help='')
 
     params = parser.parse_args()
