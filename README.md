@@ -1,5 +1,4 @@
 # 《ConeE: Global and Local Context-enhanced Embedding for Inductive Knowledge Graph Completion》  
-Authors: Jingchao Wang, Weimin Li, etc
 
 Abstract:
 
@@ -58,6 +57,6 @@ python test_ranking.py -d WN18RR_v1_ind -e WN18RR_v1
 
 
 ## Acknowledgement
-We refer to the code of some works ([GraIL](https://github.com/kkteru/grail),[SNRI], etc.) Thanks for their contributions.
+We refer to the code of some works ([GraIL], etc.) Thanks for their contributions.
 
 More details can be found in the code. If you have any questions please contact us.
